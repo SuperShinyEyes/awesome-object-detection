@@ -58,3 +58,25 @@
 - COCO metric emphasizes better bounding boxes but that emphasis must mean it de-emphasizes something else, in this case classification accuracy.
     - I believe we often want more accurate classification than very accurate bbox predictions
 - Performs very well on old metric (mAP IOU = 0.5). Performance drops significantly as the IOU threshold increases; struggles to get the boxes perfectly aligned with the object.
+
+
+--------
+## YOLOv4 (2020)
+- Use new features:
+    - Weighted-Residual-Connections (WRC), 
+    - Cross-Stage-Partial-connections (CSP), 
+    - Cross mini-Batch Normalization (CmBN), 
+    - Self-adversarial-training (SAT) 
+    - Mish-activation. 
+    - Mosaic data augmentation, 
+    - DropBlock regularization, 
+    - CIoU loss
+
+- Architecture:
+    - backbone: CSPDarknet53
+    - Neck: Spatial Pyramid Pooling (SPP), Path Aggregation Network (PAN)
+    - HEAD: YOLOv3
+### Pros
+
+### Cons
+
